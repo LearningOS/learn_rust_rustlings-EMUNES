@@ -21,9 +21,9 @@ fn main() {
         for _ in 0..10 {
             thread::sleep(Duration::from_millis(250));
             status_shared.lock().unwrap().jobs_completed += 1; // uses interior mutex. Compiler will not check mutability.
-            // Following line can not pass compiler mutability check. Use let mut can. This has nothing to do with runtime.
-            // let status = status_shared.lock().unwrap();
-            // status.jobs_completed += 1;
+                                                               // Following line can not pass compiler mutability check. Use let mut can. This has nothing to do with runtime.
+                                                               // let status = status_shared.lock().unwrap();
+                                                               // status.jobs_completed += 1;
         }
     });
 

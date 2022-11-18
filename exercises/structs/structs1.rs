@@ -17,7 +17,7 @@ mod tests {
 
     #[test]
     fn classic_c_structs() {
-        let green = ColorClassicStruct{
+        let green = ColorClassicStruct {
             name: "green".to_string(),
             hex: "#00FF00".to_string(),
         };

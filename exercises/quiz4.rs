@@ -8,7 +8,7 @@
 macro_rules! my_macro {
     ($val:expr) => {
         format!("Hello {}", $val)
-    }
+    };
 }
 
 #[cfg(test)]

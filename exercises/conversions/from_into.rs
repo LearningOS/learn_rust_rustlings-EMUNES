@@ -43,7 +43,7 @@ impl From<&str> for Person {
             if name.len() == 0 {
                 return Person::default();
             }
-    
+
             if let Ok(age) = age.parse::<usize>() {
                 Person {
                     name: name.to_string(),

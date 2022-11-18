@@ -53,14 +53,12 @@ impl FromStr for Person {
             }
 
             match age.parse::<usize>() {
-                Ok(age) => 
-                Ok(Person {
+                Ok(age) => Ok(Person {
                     name: name.to_string(),
                     age,
                 }),
-                Err(e) =>
-                    Err(ParsePersonError::ParseInt(e))
-                }
+                Err(e) => Err(ParsePersonError::ParseInt(e)),
+            }
         } else {
             Err(ParsePersonError::BadLen)
         }
